@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future Minds Academy - Login</title>
+  <link rel="icon" href="./assets/img/icon.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen text-white">
+  <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center">
+      <h1 class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+        Future Minds Academy
+      </h1>
+    </div>
+  </nav>
+
+  <div class="flex items-center justify-center min-h-[calc(100vh-80px)]">
+    <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-md text-gray-900 animate-fadeIn">
+      <h2 class="text-3xl font-bold mb-4 text-center">Welcome Back</h2>
+      <form id="loginForm">
+        <input type="email" id="loginEmail" placeholder="Email Address" class="w-full p-3 mb-3 rounded border" required />
+        <div class="relative">
+          <input type="password" id="loginPassword" placeholder="Password" class="w-full p-3 mb-3 rounded border" required />
+          <span onclick="toggleVisibility('loginPassword')" class="absolute right-3 top-3 cursor-pointer">👁️</span>
+        </div>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Login</button>
+      </form>
+      <p class="mt-4 text-center">Don't have an account? <a href="signup.html" class="text-indigo-600 font-bold">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script>
+    function toggleVisibility(id) {
+      const input = document.getElementById(id);
+      input.type = input.type === "password" ? "text" : "password";
+    }
+
+    document.getElementById("loginForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+
+      try {
+        const response = await fetch("/api/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          localStorage.setItem("user", JSON.stringify(data.user));
+          localStorage.setItem("token", data.token);
+          window.location.replace("home.html");
+        } else {
+          alert(data.message || "Login failed");
+        }
+      } catch {
+        alert("Error connecting to server.");
+      }
+    });
+  </script>
+</body>
+</html>

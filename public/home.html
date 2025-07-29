@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future Minds Academy - Home</title>
+  <link rel="icon" href="./assets/img/icon.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <nav class="bg-white shadow p-4 flex justify-between items-center sticky top-0 z-50">
+    <div class="text-2xl font-bold text-indigo-700">Future Minds Academy</div>
+    <div class="flex gap-4 items-center">
+      <span id="username" class="text-lg font-medium">Welcome, User</span>
+      <button onclick="logout()" class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Log Out</button>
+    </div>
+  </nav>
+
+  <header class="bg-indigo-100 py-16 text-center">
+    <h1 class="text-5xl font-extrabold mb-4 text-indigo-800">Learn with the Best</h1>
+    <p class="mb-6 text-lg">Join top courses taught by experts and start building your career today</p>
+    <a href="#sN"><button class="bg-indigo-600 text-white px-8 py-3 rounded-full text-lg hover:bg-indigo-700 transition">Start Now</button></a>
+  </header>
+
+  <section class="p-10" id="sN">
+    <div class="text-center mb-6">
+      <h2 class="text-4xl font-bold text-gray-800">Our Courses</h2>
+      <p class="text-gray-600 mt-2">We offer professional training in the following fields with expert instructors</p>
+    </div>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="card bg-white shadow-md rounded-lg overflow-hidden transition duration-300">
+        <img src="./assets/img/Ai.jpg" class="w-full h-56 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-700">Artificial Intelligence (AI)</h3>
+          <p class="text-gray-600">Learn artificial intelligence from basics to advanced concepts.</p>
+        </div>
+      </div>
+      <div class="card bg-white shadow-md rounded-lg overflow-hidden transition duration-300">
+        <img src="./assets/img/Cyber.jpg" class="w-full h-56 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-700">Cyber Security</h3>
+          <p class="text-gray-600">Defend against threats and protect systems securely.</p>
+        </div>
+      </div>
+      <div class="card bg-white shadow-md rounded-lg overflow-hidden transition duration-300">
+        <img src="./assets/img/Full Stack Development.jpg" class="w-full h-56 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-700">Full Stack Development</h3>
+          <p class="text-gray-600">Master frontend and backend web development technologies.</p>
+        </div>
+      </div>
+      <div class="card bg-white shadow-md rounded-lg overflow-hidden transition duration-300">
+        <img src="./assets/img/Flutter Development.jpg" class="w-full h-56 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-700">Flutter Development</h3>
+          <p class="text-gray-600">Build beautiful mobile apps using Flutter and Dart.</p>
+        </div>
+      </div>
+      <div class="card bg-white shadow-md rounded-lg overflow-hidden transition duration-300">
+        <img src="./assets/img/Data Analysis.jpg" class="w-full h-56 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-700">Data Analysis</h3>
+          <p class="text-gray-600">Analyze and visualize data for better decision-making.</p>
+        </div>
+      </div>
+      <div class="card bg-white shadow-md rounded-lg overflow-hidden transition duration-300">
+        <img src="./assets/img/UI & UX.jpg" class="w-full h-56 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-700">UI/UX Design</h3>
+          <p class="text-gray-600">Design user-friendly and aesthetic interfaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="p-10 bg-gray-100">
+    <div class="text-center mb-6">
+      <h2 class="text-4xl font-bold text-gray-800">Projects</h2>
+      <p class="text-gray-600 mt-2">We provide project services for students and professionals to build real-world applications</p>
+    </div>
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="card bg-white shadow-md rounded-lg overflow-hidden transition duration-300">
+        <img src="./assets/img/Web project.jpg" class="w-full h-56 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-700">Web Projects</h3>
+          <p class="text-gray-600">Get help building modern websites with HTML, CSS, JS, and frameworks.</p>
+        </div>
+      </div>
+      <div class="card bg-white shadow-md rounded-lg overflow-hidden transition duration-300">
+        <img src="./assets/img/Cyper Project.jpg" class="w-full h-56 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-700">Cyber Security Labs</h3>
+          <p class="text-gray-600">Hands-on labs and simulations to test your cybersecurity skills.</p>
+        </div>
+      </div>
+      <div class="card bg-white shadow-md rounded-lg overflow-hidden transition duration-300">
+        <img src="./assets/img/Ai project.jpg" class="w-full h-56 object-cover" />
+        <div class="p-4">
+          <h3 class="text-xl font-semibold mb-2 text-indigo-700">AI-Based Apps</h3>
+          <p class="text-gray-600">Build smart applications using AI models and real data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-10">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-indigo-700 mb-4">Why Choose Us?</h2>
+      <p class="text-gray-600 text-lg mb-6">We empower learners and developers to grow through practical, hands-on training and mentorship.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-indigo-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-indigo-600 mb-2">Expert Instructors</h3>
+          <p class="text-gray-700">Learn from industry professionals with real experience.</p>
+        </div>
+        <div class="bg-indigo-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-indigo-600 mb-2">Real Projects</h3>
+          <p class="text-gray-700">Get involved in real-world project development and teamwork.</p>
+        </div>
+        <div class="bg-indigo-50 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold text-indigo-600 mb-2">Career Support</h3>
+          <p class="text-gray-700">We help you build a portfolio and prepare for tech jobs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="text-center my-10">
+    <a href="https://wa.me/201500585453" target="_blank" class="bg-green-500 text-white px-8 py-3 rounded-full text-lg hover:bg-green-600 transition">Contact us on WhatsApp</a>
+  </div>
+
+  <footer class="bg-indigo-700 text-white text-center py-6">
+    <a href="mailto:futuremindskfs@gmail.com" class="text-lg">Contact : futuremindskfs@gmail.com</a>
+    <p class="mt-2 text-base">Location: Kafr El Sheikh, next to the General Hospital</p>
+    <p class="text-sm mt-4">© 2025 Future Minds Academy. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    const token = localStorage.getItem("token");
+    if (!user || !token || typeof token !== "string" || token.length < 10) {
+      localStorage.clear();
+      window.location.replace("index.html");
+    } else {
+      document.getElementById("username").textContent = `Welcome, ${user.fullName || user.name}`;
+    }
+    function logout() {
+      localStorage.clear();
+      window.location.replace("index.html");
+    }
+  </script>
+</body>
+</html>
